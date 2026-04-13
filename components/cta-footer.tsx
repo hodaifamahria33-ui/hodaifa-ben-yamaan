@@ -1,3 +1,5 @@
+import { CONTACT_EMAIL, mailtoSubject } from "@/lib/site";
+
 export function CtaSection() {
   return (
     <section id="contact" className="relative z-10 px-5 pb-20 pt-4">
@@ -13,7 +15,7 @@ export function CtaSection() {
           </div>
           <div className="shrink-0 text-left md:text-right">
             <a
-              href="mailto:hodaifamahria33@gmail.com?subject=Video%20editing%20—%20nieuw%20project"
+              href={mailtoSubject("Video editing — nieuw project")}
               className="inline-flex items-center justify-center rounded-full bg-gradient-to-br from-[#ff3d6b] via-[#7c5cff] to-[#2ee6c0] px-8 py-4 text-base font-extrabold text-[#120a16] shadow-[0_18px_50px_rgba(124,92,255,0.35)]"
             >
               Mail: start je project
@@ -37,8 +39,8 @@ export function SiteFooter() {
           <p className="text-[0.92rem] text-[rgba(231,228,255,0.62)]">Video editing · Montage · Kleur</p>
         </div>
         <div className="flex flex-wrap gap-4 font-extrabold md:justify-end">
-          <a href="mailto:hodaifamahria33@gmail.com" className="hover:text-[#2ee6c0]">
-            E-mail
+          <a href={`mailto:${CONTACT_EMAIL}`} className="hover:text-[#2ee6c0]" title={CONTACT_EMAIL}>
+            {CONTACT_EMAIL}
           </a>
           <a href="#diensten" className="hover:text-[#2ee6c0]">
             Diensten
