@@ -1,16 +1,16 @@
 const steps = [
   {
-    n: "01",
+    n: "1",
     title: "Brief",
     body: "Doel, stijl, referenties en deadline — zodat ik meteen scherp kan starten.",
   },
   {
-    n: "02",
+    n: "2",
     title: "V1 montage",
     body: "Eerste versie met structuur en ritme. Jij geeft heldere feedback.",
   },
   {
-    n: "03",
+    n: "3",
     title: "Finishing",
     body: "Kleur, geluid, titels — export in de formats die jij nodig hebt.",
   },
@@ -28,14 +28,7 @@ export function ProcessSection() {
             Geen eindeloze meetings: duidelijke stappen, strakke feedback, snelle iteraties.
           </p>
         </header>
-        <div className="relative grid gap-4">
-          <div
-            className="pointer-events-none absolute left-[22px] top-2 bottom-2 hidden w-0.5 opacity-55 md:block"
-            style={{
-              background: "linear-gradient(180deg, rgba(255,61,107,0.55), rgba(124,92,255,0.55), rgba(46,230,192,0.45))",
-            }}
-            aria-hidden
-          />
+        <div className="grid gap-4">
           {steps.map((s) => (
             <div
               key={s.n}
