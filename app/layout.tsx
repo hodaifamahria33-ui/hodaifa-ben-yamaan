@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { DM_Sans, Outfit } from "next/font/google";
+import { basePath } from "@/lib/base-path";
 import "./globals.css";
 
 const dm = DM_Sans({
@@ -20,7 +21,7 @@ export const metadata: Metadata = {
   description:
     "Freelance video-editor in Nederland: social clips, YouTube en campagnes. Strakke montage, kleur en ritme — remote of op locatie.",
   icons: {
-    icon: "/favicon.svg",
+    icon: `${basePath || ""}/favicon.svg`,
   },
   openGraph: {
     type: "website",

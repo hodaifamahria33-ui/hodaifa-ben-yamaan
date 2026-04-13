@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
-    "build:github": "cross-env BASE_PATH=/hodaifa-ben-yamaan next build",
+    "build:github": "cross-env BASE_PATH=/hodaifa-ben-yamaan NEXT_PUBLIC_BASE_PATH=/hodaifa-ben-yamaan next build",
     "start": "next start",
     "lint": "eslint"
   },

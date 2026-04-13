@@ -27,7 +27,10 @@ jobs:
       - name: Build static site
         env:
           BASE_PATH: /hodaifa-ben-yamaan
+          NEXT_PUBLIC_BASE_PATH: /hodaifa-ben-yamaan
         run: npm run build
+      - name: Controleer build (moet index.html bestaan)
+        run: test -f out/index.html && ls -la out | head -25
       - uses: actions/upload-pages-artifact@v3
         with:
           path: out
