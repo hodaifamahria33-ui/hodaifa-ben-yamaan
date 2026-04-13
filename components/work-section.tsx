@@ -50,10 +50,18 @@ export function WorkSection() {
                   <span className="h-2.5 w-2.5 rounded-full bg-white/15" />
                   <span className="h-2.5 w-2.5 rounded-full bg-white/15" />
                 </div>
-                <div className="relative aspect-video">
-                  <div className={`absolute inset-0 ${thumbClass[p.thumb]}`} />
-                  <div className="absolute left-1/2 top-[56%] flex h-16 w-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-[#07060b]/45 text-lg text-white backdrop-blur-md">
-                    ▶
+                <div className="relative aspect-video cursor-default select-none">
+                  <div
+                    className={`pointer-events-none absolute inset-0 ${thumbClass[p.thumb]}`}
+                    aria-hidden
+                  />
+                  {/* Geen echte video: alleen een still / stijlvoorbeeld (geen play-knop — die leek klikbaar) */}
+                  <div className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-white/10" aria-hidden />
+                  <div className="pointer-events-none absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/75 to-transparent px-3 pb-3 pt-10">
+                    <p className="text-[0.78rem] font-bold uppercase tracking-[0.06em] text-white/90">
+                      Stijlvoorbeeld
+                    </p>
+                    <p className="text-[0.8rem] text-white/65">Geen video — dit is een decoratieve preview</p>
                   </div>
                 </div>
               </div>
