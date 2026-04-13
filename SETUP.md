@@ -39,10 +39,16 @@ Je site op GitHub Pages kan **geen** Outlook/Microsoft “inloggen” koppelen z
 1. Ga naar **https://web3forms.com**
 2. Vul het e-mailadres in waar je aanvragen wilt ontvangen (bijv. je Gmail).
 3. Je krijgt een **Access Key** (lange code).
-4. Op GitHub: repo → **Settings** → **Secrets and variables** → **Actions** → **New repository secret**
-   - Name: `WEB3FORMS_ACCESS_KEY`
-   - Value: plak je access key → **Add secret**
-5. Push een wijziging naar `main` (of **Actions** → **Run workflow**) zodat de site opnieuw gebouwd wordt.
+4. **Snelste manier (Windows, met GitHub CLI):** dubbelklik niet — open PowerShell in je projectmap en voer uit:
+   ```powershell
+   .\scripts\set-web3-secret.ps1
+   ```
+   Plak je key als daarom wordt gevraagd.  
+   **Of handmatig:** repo → **Settings** → **Secrets and variables** → **Actions** → **New repository secret**  
+   - Name: `WEB3FORMS_ACCESS_KEY`  
+   - Value: je access key  
+
+5. Deploy opnieuw: **Actions** → **Deploy Next.js to GitHub Pages** → **Run workflow**, of push een kleine wijziging naar `main`.
 
 Daarna zegt het formulier op je site **“Verstuur bericht”** en komen mails **direct** binnen — zonder dat bezoekers Outlook hoeven te openen.
 
