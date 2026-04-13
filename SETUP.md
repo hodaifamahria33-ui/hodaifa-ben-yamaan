@@ -29,3 +29,27 @@ npm run build:github
 ```
 
 Output in map `out/`.
+
+---
+
+## Contactformulier → echte e-mail (aanbevolen)
+
+Je site op GitHub Pages kan **geen** Outlook/Microsoft “inloggen” koppelen zoals een app. Wel kun je **gratis** formulier-mail gebruiken:
+
+1. Ga naar **https://web3forms.com**
+2. Vul het e-mailadres in waar je aanvragen wilt ontvangen (bijv. je Gmail).
+3. Je krijgt een **Access Key** (lange code).
+4. Op GitHub: repo → **Settings** → **Secrets and variables** → **Actions** → **New repository secret**
+   - Name: `WEB3FORMS_ACCESS_KEY`
+   - Value: plak je access key → **Add secret**
+5. Push een wijziging naar `main` (of **Actions** → **Run workflow**) zodat de site opnieuw gebouwd wordt.
+
+Daarna zegt het formulier op je site **“Verstuur bericht”** en komen mails **direct** binnen — zonder dat bezoekers Outlook hoeven te openen.
+
+**Lokaal testen:** maak een bestand `.env.local` in je project:
+
+```env
+NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY=jouw_key_hier
+```
+
+Daarna `npm run dev`.

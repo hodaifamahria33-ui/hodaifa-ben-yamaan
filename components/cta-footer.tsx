@@ -1,6 +1,8 @@
 import { ContactForm } from "@/components/contact-form";
 import { CONTACT_EMAIL } from "@/lib/site";
 
+const hasWeb3 = Boolean(process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY);
+
 export function CtaSection() {
   return (
     <section id="contact" className="relative z-10 px-5 pb-20 pt-4">
@@ -11,8 +13,20 @@ export function CtaSection() {
               Klaar voor een edit die opvalt?
             </h2>
             <p className="mt-2 text-[rgba(231,228,255,0.72)]">
-              Vul hieronder je naam, je e-mail en wat je wilt laten doen. Je mail-app opent met een kant-en-klaar bericht
-              naar <span className="font-semibold text-white/90">{CONTACT_EMAIL}</span>.
+              {hasWeb3 ? (
+                <>
+                  Vul hieronder je naam, je e-mail en wat je wilt laten doen. Je bericht wordt verstuurd naar{" "}
+                  <span className="font-semibold text-white/90">{CONTACT_EMAIL}</span>.
+                </>
+              ) : (
+                <>
+                  Vul hieronder je naam, je e-mail en wat je wilt laten doen. Je mail-app opent met een kant-en-klaar
+                  bericht naar <span className="font-semibold text-white/90">{CONTACT_EMAIL}</span> (daarna één keer op
+                  Verzenden). Wil je dat het <em>zonder</em> mail-app direct binnenkomt? Dat kan met een gratis sleutel —
+                  uitleg staat in het bestand <span className="font-semibold text-white/85">SETUP.md</span> in je
+                  GitHub-repo.
+                </>
+              )}
             </p>
           </div>
           <ContactForm />
