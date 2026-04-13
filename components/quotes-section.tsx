@@ -1,11 +1,11 @@
 const quotes = [
   {
     q: "“Eindelijk iemand die begrijpt dat een goede edit ook emotie heeft. Het voelt duurder dan het is.”",
-    a: "— Creator, mode & lifestyle",
+    a: "— Creator, mode & lifestyle (voorbeeld)",
   },
   {
     q: "“Snel, duidelijk, en de pacing klopt. Onze Shorts presteren merkbaar beter.”",
-    a: "— Klein merk, DACH",
+    a: "— Klein merk, Randstad (voorbeeld)",
   },
 ];
 
@@ -18,7 +18,7 @@ export function QuotesSection() {
       <div className="mx-auto max-w-[1140px] px-5">
         <header className="mb-10 max-w-[760px]">
           <h2 className="font-display text-[clamp(1.75rem,3.2vw,2.45rem)] font-black leading-tight tracking-[-0.03em]">
-            Wat klanten willen horen{" "}
+            Wat klanten graag horen{" "}
             <span className="font-bold text-[rgba(74,68,88,0.85)]">(voorbeeldteksten)</span>
           </h2>
           <p className="mt-2 text-[1.05rem] text-[#4a4458]">Vervang dit later door echte quotes.</p>

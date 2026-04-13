@@ -1,21 +1,21 @@
 const projects = [
   {
     tag: "Social",
-    title: "Launch week — high energy",
+    title: "Launchweek — hoge energie",
     body: "Snelle cuts, punchy muziek, sterke hook binnen 2 seconden.",
     thumb: "w1",
     wide: false,
   },
   {
     tag: "YouTube",
-    title: "Deep dive — rust & ritme",
+    title: "Diepte-interview — rust & ritme",
     body: "Ademruimte waar het moet, en versnelling waar het mag.",
     thumb: "w2",
     wide: false,
   },
   {
-    tag: "Brand",
-    title: "Campaign — clean & bold",
+    tag: "Merk",
+    title: "Campagne — strak & bold",
     body: "Strakke typografie, consistente kleur en premium eindgevoel.",
     thumb: "w3",
     wide: true,
@@ -34,8 +34,8 @@ export function WorkSection() {
       <div className="mx-auto max-w-[1140px]">
         <header className="mb-10 max-w-[760px]">
           <h2 className="font-display text-[clamp(1.75rem,3.2vw,2.45rem)] font-black leading-tight tracking-[-0.03em]">
-            Selected work{" "}
-            <span className="text-[rgba(231,228,255,0.55)]">(placeholders — jouw echte werk hier)</span>
+            Portfolio{" "}
+            <span className="text-[rgba(231,228,255,0.55)]">(voorbeelden — jouw echte werk hier)</span>
           </h2>
           <p className="mt-2 text-[1.05rem] text-[rgba(231,228,255,0.72)]">
             Stijlvoorbeelden: strak, kleurrijk en “expensive”. Vervang door jouw projecten zodra je assets hebt.

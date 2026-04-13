@@ -16,7 +16,7 @@ export function CtaSection() {
               href="mailto:hodaifamahria33@gmail.com?subject=Video%20editing%20—%20nieuw%20project"
               className="inline-flex items-center justify-center rounded-full bg-gradient-to-br from-[#ff3d6b] via-[#7c5cff] to-[#2ee6c0] px-8 py-4 text-base font-extrabold text-[#120a16] shadow-[0_18px_50px_rgba(124,92,255,0.35)]"
             >
-              Mail: start project
+              Mail: start je project
             </a>
             <p className="mt-3 text-[0.92rem] text-[rgba(231,228,255,0.62)]">
               Voeg een Drive-link toe als je al beelden hebt.
@@ -38,7 +38,7 @@ export function SiteFooter() {
         </div>
         <div className="flex flex-wrap gap-4 font-extrabold md:justify-end">
           <a href="mailto:hodaifamahria33@gmail.com" className="hover:text-[#2ee6c0]">
-            Email
+            E-mail
           </a>
           <a href="#diensten" className="hover:text-[#2ee6c0]">
             Diensten

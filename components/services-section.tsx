@@ -10,7 +10,7 @@ const cards = [
     ),
   },
   {
-    title: "YouTube & long-form",
+    title: "YouTube & longform",
     body: "Verhaal eerst: chapters, pacing en een montage die kijkers langer vasthoudt.",
     ticks: ["Structuur & storytelling", "Thumbnail momenten"],
     icon: (
@@ -22,7 +22,7 @@ const cards = [
   {
     title: "Campagnes & ads",
     body: "Meerdere lengtes en ratios uit één shoot — klaar om te schalen.",
-    ticks: ["9:16 / 1:1 / 16:9", "Brand-safe afwerking"],
+    ticks: ["9:16 / 1:1 / 16:9", "Merk-consistente afwerking"],
     icon: (
       <svg viewBox="0 0 24 24" width={28} height={28} aria-hidden>
         <path fill="currentColor" d="M12 3a9 9 0 100 18 9 9 0 000-18zm0 2a7 7 0 110 14 7 7 0 010-14zm-1 3v8l6-4-6-4z" />

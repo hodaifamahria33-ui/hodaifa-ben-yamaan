@@ -1,8 +1,8 @@
 const items = [
   "Montage",
-  "Sound design basics",
+  "Geluid (mix)",
   "Color grading",
-  "Motion titles",
+  "Motion & titels",
   "Reels & Shorts",
   "YouTube long-form",
 ];
