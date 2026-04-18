@@ -75,22 +75,22 @@ export function ContactForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="mt-8 grid max-w-xl gap-4 rounded-2xl border border-white/10 bg-black/25 p-6 text-left"
+      className="mt-8 grid max-w-xl gap-4 rounded-2xl border border-black/10 bg-white p-6 text-left"
       noValidate
     >
       {status === "ok" && (
-        <p className="rounded-xl border border-green-500/40 bg-green-500/10 px-4 py-3 text-sm text-green-100">
+        <p className="rounded-xl border border-green-500/40 bg-green-500/10 px-4 py-3 text-sm text-green-900">
           Bedankt! Je bericht is verstuurd. Ik neem zo snel mogelijk contact met je op.
         </p>
       )}
       {status === "err" && (
-        <p className="rounded-xl border border-red-500/40 bg-red-500/10 px-4 py-3 text-sm text-red-100">
+        <p className="rounded-xl border border-red-500/40 bg-red-500/10 px-4 py-3 text-sm text-red-900">
           {errMsg}
         </p>
       )}
 
       <div>
-        <label htmlFor="contact-naam" className="mb-1.5 block text-sm font-bold text-[rgba(231,228,255,0.85)]">
+        <label htmlFor="contact-naam" className="mb-1.5 block text-sm font-bold text-black/80">
           Jouw naam
         </label>
         <input
@@ -102,12 +102,12 @@ export function ContactForm() {
           value={naam}
           onChange={(e) => setNaam(e.target.value)}
           disabled={status === "sending"}
-          className="w-full rounded-xl border border-white/15 bg-white/[0.06] px-4 py-3 text-[#f7f4ff] placeholder:text-white/35 outline-none ring-violet-500/40 focus:border-violet-500/50 focus:ring-2 disabled:opacity-50"
+          className="w-full rounded-xl border border-black/15 bg-white px-4 py-3 text-black placeholder:text-black/35 outline-none ring-black/20 focus:border-black/40 focus:ring-2 disabled:opacity-50"
           placeholder="Bijv. Sam de Vries"
         />
       </div>
       <div>
-        <label htmlFor="contact-email" className="mb-1.5 block text-sm font-bold text-[rgba(231,228,255,0.85)]">
+        <label htmlFor="contact-email" className="mb-1.5 block text-sm font-bold text-black/80">
           Jouw e-mail
         </label>
         <input
@@ -119,12 +119,12 @@ export function ContactForm() {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           disabled={status === "sending"}
-          className="w-full rounded-xl border border-white/15 bg-white/[0.06] px-4 py-3 text-[#f7f4ff] placeholder:text-white/35 outline-none ring-violet-500/40 focus:border-violet-500/50 focus:ring-2 disabled:opacity-50"
+          className="w-full rounded-xl border border-black/15 bg-white px-4 py-3 text-black placeholder:text-black/35 outline-none ring-black/20 focus:border-black/40 focus:ring-2 disabled:opacity-50"
           placeholder="jij@voorbeeld.nl"
         />
       </div>
       <div>
-        <label htmlFor="contact-wens" className="mb-1.5 block text-sm font-bold text-[rgba(231,228,255,0.85)]">
+        <label htmlFor="contact-wens" className="mb-1.5 block text-sm font-bold text-black/80">
           Wat wil je laten doen?
         </label>
         <textarea
@@ -135,14 +135,14 @@ export function ContactForm() {
           value={wens}
           onChange={(e) => setWens(e.target.value)}
           disabled={status === "sending"}
-          className="w-full resize-y rounded-xl border border-white/15 bg-white/[0.06] px-4 py-3 text-[#f7f4ff] placeholder:text-white/35 outline-none ring-violet-500/40 focus:border-violet-500/50 focus:ring-2 disabled:opacity-50"
+          className="w-full resize-y rounded-xl border border-black/15 bg-white px-4 py-3 text-black placeholder:text-black/35 outline-none ring-black/20 focus:border-black/40 focus:ring-2 disabled:opacity-50"
           placeholder="Bijv. 3 Reels van ruw materiaal, deadline volgende week…"
         />
       </div>
       <button
         type="submit"
         disabled={status === "sending"}
-        className="inline-flex w-full items-center justify-center rounded-full bg-gradient-to-br from-[#ff3d6b] via-[#7c5cff] to-[#2ee6c0] px-8 py-4 text-base font-extrabold text-[#120a16] shadow-[0_18px_50px_rgba(124,92,255,0.35)] hover:opacity-95 disabled:opacity-60 sm:w-auto"
+        className="inline-flex w-full items-center justify-center rounded-full border border-black/20 bg-black px-8 py-4 text-base font-extrabold text-white hover:bg-black/85 disabled:opacity-60 sm:w-auto"
       >
         {status === "sending"
           ? "Bezig met versturen…"
@@ -150,17 +150,16 @@ export function ContactForm() {
             ? "Verstuur bericht"
             : "Open mail met dit bericht"}
       </button>
-      <p className="text-[0.85rem] leading-relaxed text-[rgba(231,228,255,0.55)]">
+      <p className="text-[0.85rem] leading-relaxed text-black/55">
         {useWeb3 ? (
           <>
-            Je bericht gaat direct naar <span className="font-semibold text-white/80">{CONTACT_EMAIL}</span>. Je hoeft
+            Je bericht gaat direct naar <span className="font-semibold text-black/80">{CONTACT_EMAIL}</span>. Je hoeft
             je mailprogramma niet te openen.
           </>
         ) : (
           <>
-            Zonder extra instelling opent na Verzenden je mail-app (Outlook, Gmail, …) met dit bericht. Voor{" "}
-            <strong className="text-white/75">direct versturen</strong> zonder mail-app: zie{" "}
-            <span className="text-white/80">SETUP.md</span> op GitHub (Web3Forms, eenmalig).
+            Zonder extra instelling opent na Verzenden je mail-app met dit bericht. Voor{" "}
+            <strong className="text-black/75">direct versturen</strong>: zie <span className="text-black/80">SETUP.md</span>.
           </>
         )}
       </p>

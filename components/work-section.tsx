@@ -1,31 +1,31 @@
 const projects = [
   {
     tag: "Social",
-    title: "Launchweek — hoge energie",
-    body: "Snelle cuts, punchy muziek, sterke hook binnen 2 seconden.",
+    title: "Launchweek",
+    body: "Snelle social edit.",
     thumb: "w1",
     wide: false,
   },
   {
     tag: "YouTube",
-    title: "Diepte-interview — rust & ritme",
-    body: "Ademruimte waar het moet, en versnelling waar het mag.",
+    title: "Interview edit",
+    body: "Rustig tempo en duidelijke flow.",
     thumb: "w2",
     wide: false,
   },
   {
     tag: "Merk",
-    title: "Campagne — strak & bold",
-    body: "Strakke typografie, consistente kleur en premium eindgevoel.",
+    title: "Campagne edit",
+    body: "Nette merkvideo in meerdere formaten.",
     thumb: "w3",
     wide: true,
   },
 ];
 
 const thumbClass: Record<string, string> = {
-  w1: "bg-[radial-gradient(600px_240px_at_20%_20%,rgba(255,61,107,0.55),transparent_55%),radial-gradient(500px_240px_at_80%_70%,rgba(124,92,255,0.55),transparent_55%),linear-gradient(145deg,#120b1f,#07060b)]",
-  w2: "bg-[radial-gradient(500px_240px_at_70%_25%,rgba(46,230,192,0.45),transparent_55%),radial-gradient(500px_240px_at_20%_80%,rgba(124,92,255,0.35),transparent_55%),linear-gradient(155deg,#0b1220,#07060b)]",
-  w3: "bg-[conic-gradient(from_210deg_at_50%_45%,rgba(255,200,87,0.35),rgba(124,92,255,0.45),rgba(255,61,107,0.35),rgba(46,230,192,0.25),rgba(255,200,87,0.35)),linear-gradient(180deg,#0a0a12,#120b1f)]",
+  w1: "bg-[radial-gradient(600px_240px_at_20%_20%,rgba(0,0,0,0.08),transparent_55%),radial-gradient(500px_240px_at_80%_70%,rgba(0,0,0,0.06),transparent_55%),linear-gradient(145deg,#f7f7f7,#efefef)]",
+  w2: "bg-[radial-gradient(500px_240px_at_70%_25%,rgba(0,0,0,0.08),transparent_55%),radial-gradient(500px_240px_at_20%_80%,rgba(0,0,0,0.04),transparent_55%),linear-gradient(155deg,#fafafa,#ececec)]",
+  w3: "bg-[conic-gradient(from_210deg_at_50%_45%,rgba(0,0,0,0.08),rgba(0,0,0,0.03),rgba(0,0,0,0.06),rgba(0,0,0,0.03),rgba(0,0,0,0.08)),linear-gradient(180deg,#f5f5f5,#ececec)]",
 };
 
 export function WorkSection() {
@@ -34,21 +34,18 @@ export function WorkSection() {
       <div className="mx-auto max-w-[1140px]">
         <header className="mb-10 max-w-[760px]">
           <h2 className="font-display text-[clamp(1.75rem,3.2vw,2.45rem)] font-black leading-tight tracking-[-0.03em]">
-            Portfolio{" "}
-            <span className="text-[rgba(231,228,255,0.55)]">(voorbeelden — jouw echte werk hier)</span>
+            Portfolio <span className="text-black/45">(voorbeelden)</span>
           </h2>
-          <p className="mt-2 text-[1.05rem] text-[rgba(231,228,255,0.72)]">
-            Stijlvoorbeelden: strak, kleurrijk en “expensive”. Vervang door jouw projecten zodra je assets hebt.
-          </p>
+          <p className="mt-2 text-[1.05rem] text-black/60">Voorbeelden. Later kun je hier je echte werk zetten.</p>
         </header>
         <div className="grid gap-4 md:grid-cols-2">
           {projects.map((p) => (
             <article key={p.title} className={p.wide ? "md:col-span-2" : ""}>
-              <div className="overflow-hidden rounded-[22px] border border-white/10 bg-white/[0.03]">
-                <div className="flex gap-1.5 border-b border-white/10 bg-[#0a0910]/65 px-3 py-2">
-                  <span className="h-2.5 w-2.5 rounded-full bg-white/15" />
-                  <span className="h-2.5 w-2.5 rounded-full bg-white/15" />
-                  <span className="h-2.5 w-2.5 rounded-full bg-white/15" />
+              <div className="overflow-hidden rounded-[22px] border border-black/10 bg-white">
+                <div className="flex gap-1.5 border-b border-black/10 bg-[#f0f0f0] px-3 py-2">
+                  <span className="h-2.5 w-2.5 rounded-full bg-black/20" />
+                  <span className="h-2.5 w-2.5 rounded-full bg-black/20" />
+                  <span className="h-2.5 w-2.5 rounded-full bg-black/20" />
                 </div>
                 <div className="relative aspect-video cursor-default select-none">
                   <div
@@ -56,21 +53,21 @@ export function WorkSection() {
                     aria-hidden
                   />
                   {/* Geen echte video: alleen een still / stijlvoorbeeld (geen play-knop — die leek klikbaar) */}
-                  <div className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-white/10" aria-hidden />
-                  <div className="pointer-events-none absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/75 to-transparent px-3 pb-3 pt-10">
-                    <p className="text-[0.78rem] font-bold uppercase tracking-[0.06em] text-white/90">
+                  <div className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-black/10" aria-hidden />
+                  <div className="pointer-events-none absolute bottom-0 left-0 right-0 bg-gradient-to-t from-white/85 to-transparent px-3 pb-3 pt-10">
+                    <p className="text-[0.78rem] font-bold uppercase tracking-[0.06em] text-black/70">
                       Stijlvoorbeeld
                     </p>
-                    <p className="text-[0.8rem] text-white/65">Geen video — dit is een decoratieve preview</p>
+                    <p className="text-[0.8rem] text-black/55">Geen video — dit is een decoratieve preview</p>
                   </div>
                 </div>
               </div>
               <div className="px-1 pt-4">
-                <span className="inline-flex rounded-full border border-white/10 px-2.5 py-1 text-[0.72rem] font-black uppercase tracking-[0.12em] text-[rgba(231,228,255,0.65)]">
+                <span className="inline-flex rounded-full border border-black/10 px-2.5 py-1 text-[0.72rem] font-black uppercase tracking-[0.12em] text-black/60">
                   {p.tag}
                 </span>
                 <h3 className="font-display mt-2 text-xl font-black">{p.title}</h3>
-                <p className="mt-1 text-[rgba(231,228,255,0.72)]">{p.body}</p>
+                <p className="mt-1 text-black/60">{p.body}</p>
               </div>
             </article>
           ))}

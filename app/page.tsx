@@ -2,6 +2,7 @@ import { CtaSection, SiteFooter } from "@/components/cta-footer";
 import { HeroSection } from "@/components/hero-section";
 import { MarqueeStrip } from "@/components/marquee-strip";
 import { PageBackground } from "@/components/page-background";
+import { PricingSection } from "@/components/pricing-section";
 import { ProcessSection } from "@/components/process-section";
 import { QuotesSection } from "@/components/quotes-section";
 import { ServicesSection } from "@/components/services-section";
@@ -17,6 +18,7 @@ export default function Home() {
         <HeroSection />
         <MarqueeStrip />
         <ServicesSection />
+        <PricingSection />
         <WorkSection />
         <QuotesSection />
         <ProcessSection />
