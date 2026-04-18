@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "next dev",
     "build": "next build",
     "build:github": "cross-env BASE_PATH=/hodaifa-ben-yamaan NEXT_PUBLIC_BASE_PATH=/hodaifa-ben-yamaan next build",
     "start": "next start",
